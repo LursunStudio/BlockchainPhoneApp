@@ -1,12 +1,33 @@
+[run]
+先開好Genymotion 的 Android 虛擬機
+還有Android Studio 幫忙連線(隨便開一個專案run一下就好)
+
+唯一要會的指令
+cd 到這個目錄
+react-native run-android
+
+
+[add]
+選擇你要上傳或更新的檔案按 +
+不需要上傳 或自己測試而已 別按
+誤按可以按 - 取消
+
 [訊息] 別亂填
 填你改了什麼,增加了什麼
 並附上自己名稱 才知道誰改的
 訊息可以 Shift+Enter 換行 打多行訊息
+寫好了確定好再打勾
 
 [push]
 push (推送之前)
-先 pull (提取) *如果不行就 提取(重訂基底) //別濫用,不行再用
-然後 先自己測試過一遍畫面有沒有問題
-ok 沒問題 再把要上傳的push 沒有要上傳的別跟著上去
-最後到網頁上確定 自己push 成功
-https://github.com/LursunStudio/BlockchainPhoneApp
+1.先 pull (提取) *如果不行就 提取(重訂基底) //別濫用,不行再用
+2.然後 先自己測試過一遍畫面有沒有問題
+3.ok 沒問題 再把要上傳的push 沒有要上傳的別跟著上去 (add的步驟)
+4.最後到網頁上確定 自己push 成功
+5.push 後 Line 通知一下 大家 自己有修改
+五個步驟順序別搞錯 尤其是1,2 一定要pull抓最新的來測
+搞不好別人先改了其他的,但加上自己修改,
+結果是不行的,最後誤上傳不能用的版本
+
+github 網頁 Ctrl+滑鼠點一下就能連 https://github.com/LursunStudio/BlockchainPhoneApp
+
