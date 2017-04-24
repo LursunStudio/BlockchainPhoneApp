@@ -55,13 +55,11 @@ export default class Frame extends Component {
        
         <Navigator
           configureScene={(route, routeStack) => Navigator.SceneConfigs.FloatFromBottom}
-          initialRoute={{ title: 'Page1' }}
+          initialRoute={{ title: 'Main' }}
           renderScene={(route, navigator) =>
           {
             switch (route.title){
               //增加頁面的地方
-              case 'Login':
-                return (<Login navigator={navigator}/>)
               case 'Main':
                 return (<Main navigator={navigator}/>)
               case 'Page1'://範本
