@@ -9,6 +9,7 @@ import {
   Button,
   Alert,
   Navigator,
+  Image,
   AsyncStorage
 
 } from 'react-native';
@@ -46,7 +47,10 @@ export default class Login extends Component {
                 return (<Frame navigator={navigator}/>)
               default:
                 this.navigator=navigator
-                return(<View style={[{padding:70}]}>
+                return(
+                <View style={[{padding:70}]}>
+                  <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} style={{width: '100%', height: '20%'}} />
+                  <Image source={require("./img/happy.png")} style={{width: '100%', height: '20%'}} /> 
                   <Text style={{fontSize:20}}>Login</Text>
                   <View style={{padding:20}}>
                     <View style={styles.horizontal}>
