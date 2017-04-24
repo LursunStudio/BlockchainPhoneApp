@@ -14,7 +14,7 @@ import {
 export default class Page1 extends Component {
   render() {
     return (
-      
+      //畫面
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to Page1!
@@ -40,6 +40,7 @@ export default class Page1 extends Component {
 
 
 const styles = StyleSheet.create({
+  //特效
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -58,4 +59,3 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Page1', () => Page1);
