@@ -48,7 +48,7 @@ export default class Login extends Component {
               default:
                 this.navigator=navigator
                 return(
-                <View style={[{padding:70}]}>
+                <View style={[{padding:70}]  }>
                   <Image source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}} style={{width: '100%', height: '20%'}} />
                   <Image source={require("./img/happy.png")} style={{width: '100%', height: '20%'}} /> 
                   <Text style={{fontSize:20}}>Login</Text>

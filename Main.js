@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from 'react-native-button';
 import {
   AppRegistry,
   StyleSheet,
@@ -6,10 +7,11 @@ import {
   View,
   TextInput,
   ToolbarAndroid,
-  Button,
+  TouchableOpacity,
   Navigator,
   DrawerLayoutAndroid,
-  AsyncStorage
+  AsyncStorage,
+  Image
 
 } from 'react-native';
 
@@ -20,7 +22,36 @@ export default class Main extends Component {
   }
   render() {
     return (
-       <Text>Mainasdf</Text>
+        <View style={{flex:1,paddingTop:70,paddingLeft:40,paddingRight:40}}>
+          <View style={[styles.horizontal]}> 
+            <View style={{padding:10,flex:1,height:'100%'}}>
+              <Button
+                style={{align:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#4285f4',borderRadius:5}}>
+                Press Me!
+              </Button>
+            </View>
+            <View style={{padding:10,flex:1}}>
+              <Button
+                style={{ textAlign:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#ea4335',borderRadius:5}}>
+                Press Me!
+              </Button>
+            </View>
+          </View>
+          <View style={[styles.horizontal]}> 
+            <View style={{padding:10,flex:1}}>
+              <Button
+                style={{textAlign:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#34a853',borderRadius:5}}>
+                Press Me!
+              </Button>
+            </View>
+            <View style={{padding:10,flex:1}}>
+              <Button
+                style={{textAlign:'center', fontSize: 20,height:'100%', color: 'green',backgroundColor:'#fbbc05',borderRadius:5}}>
+                Press Me!
+              </Button>
+            </View>
+          </View>
+        </View>
     )
   }
 }
@@ -29,6 +60,10 @@ export default class Main extends Component {
 
 
 const styles = StyleSheet.create({
-
+  horizontal:{
+    flexDirection:'row',
+    height:'20%',
+    justifyContent:'center',
+  },
 });
 
