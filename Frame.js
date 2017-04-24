@@ -60,8 +60,6 @@ export default class Frame extends Component {
           {
             switch (route.title){
               //增加頁面的地方
-              case 'Login':
-                return (<Login navigator={navigator}/>)
               case 'Main':
                 return (<Main navigator={navigator}/>)
               case 'Page1'://範本
