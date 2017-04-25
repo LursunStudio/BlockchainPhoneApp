@@ -20,6 +20,9 @@ export default class Main extends Component {
   constructor(props) {
     super(props);
   }
+  async turn(self){
+    self.navigator.push({title:"Hotcontract"})
+  }
   render() {
     return (
         <View style={{flex:1,paddingTop:70,paddingLeft:40,paddingRight:40}}>
@@ -31,7 +34,7 @@ export default class Main extends Component {
               </Button>
             </View>
             <View style={{padding:10,flex:1}}>
-              <Button
+              <Button onPress={this.turn.bind(this.turn,this)}
                 style={{ textAlign:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#ea4335',borderRadius:5}}>
                 所有公開案件
               </Button>

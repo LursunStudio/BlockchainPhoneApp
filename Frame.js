@@ -66,7 +66,9 @@ export default class Frame extends Component {
               case 'Main':
                 return (<Main navigator={navigator}/>)
               case 'Page1'://範本
-                return (<Page1 navigator={navigator}/>)  
+                return (<Page1 navigator={navigator}/>)
+              case 'Hotcontract':
+                return (<Hotcontract navigator={navigator}/>)  
             }
           }}
       />
