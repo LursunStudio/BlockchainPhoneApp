@@ -19,7 +19,7 @@ import {
 import Login from './Login.js';
 import Main from './Main.js';
 import Page1 from './Page1.js';
-
+import Hotcontract from './Hotcontract.js';
 export default class Frame extends Component {
   
   constructor(props) {
