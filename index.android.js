@@ -20,7 +20,11 @@ import Hotcontract from'./Hotcontract';
 
 export default class Test extends Component {
   render() {
+
     return (<Hotcontract/>);
+
+    
+
   }
 }
 

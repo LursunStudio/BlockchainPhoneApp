@@ -48,7 +48,10 @@ export default class Frame extends Component {
         renderNavigationView={() =>{return(
           //增加右滑東西
           <View > 
-            <Text>456</Text>
+            <Text style={{textAlign:'center',fontSize: 20, color: 'green',}}>健康</Text>
+            <Text style={{textAlign:'center',fontSize: 20, color: 'green',}}>生活</Text>
+            <Text style={{textAlign:'center',fontSize: 20, color: 'green',}}>娛樂</Text>
+            <Text style={{textAlign:'center',fontSize: 20, color: 'green',}}>教育</Text>
           </View>  
 
         )}} >  
