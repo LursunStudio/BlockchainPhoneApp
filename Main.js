@@ -37,19 +37,52 @@ export default class Main extends Component {
               </Button>
             </View>
           </View>
+
+
+
+
+
           <View style={[styles.horizontal]}> 
+            
             <View style={{padding:10,flex:1}}>
               <Button
                 style={{textAlign:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#34a853',borderRadius:5}}>
                 Press Me!
               </Button>
             </View>
+
             <View style={{padding:10,flex:1}}>
               <Button
                 style={{textAlign:'center', fontSize: 20,height:'100%', color: 'green',backgroundColor:'#fbbc05',borderRadius:5}}>
                 Press Me!
               </Button>
             </View>
+
+            <View style={{padding:10,flex:1}}>
+              <Button
+                style={{textAlign:'center', fontSize: 20,height:'100%', color: 'green',backgroundColor:'#fbbc05',borderRadius:5}}>
+                Press Me!
+              </Button>
+            </View>
+          </View>
+
+
+          <View style={[styles.horizontal]}> 
+
+            <View style={{padding:10,flex:1}}>
+              <Button
+                style={{textAlign:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#34a853',borderRadius:5}}>
+                Press Me!
+              </Button>
+            </View>
+
+            <View style={{padding:10,flex:1}}>
+              <Button
+                style={{textAlign:'center', fontSize: 20,height:'100%', color: 'green',backgroundColor:'#fbbc05',borderRadius:5}}>
+                Press Me!
+              </Button>
+            </View>
+
           </View>
         </View>
     )
