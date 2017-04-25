@@ -27,13 +27,13 @@ export default class Main extends Component {
             <View style={{padding:10,flex:1,height:'100%'}}>
               <Button
                 style={{align:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#4285f4',borderRadius:5}}>
-                Press Me!
+                參與案件
               </Button>
             </View>
             <View style={{padding:10,flex:1}}>
               <Button
                 style={{ textAlign:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#ea4335',borderRadius:5}}>
-                Press Me!
+                所有公開案件
               </Button>
             </View>
           </View>
@@ -41,13 +41,13 @@ export default class Main extends Component {
             <View style={{padding:10,flex:1}}>
               <Button
                 style={{textAlign:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#34a853',borderRadius:5}}>
-                Press Me!
+                我的最愛
               </Button>
             </View>
             <View style={{padding:10,flex:1}}>
               <Button
                 style={{textAlign:'center', fontSize: 20,height:'100%', color: 'green',backgroundColor:'#fbbc05',borderRadius:5}}>
-                Press Me!
+                建立案件
               </Button>
             </View>
           </View>

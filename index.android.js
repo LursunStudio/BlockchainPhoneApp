@@ -14,12 +14,13 @@ import {
 
 import Frame from './Frame.js';
 import Page1 from './Page1.js';
+import Main from './Main.js';
 import Login from './Login.js';
 
 
 export default class Test extends Component {
   render() {
-    return (<Login/>);
+    return (<Frame/>);
   }
 }
 
