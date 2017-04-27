@@ -17,11 +17,12 @@ import Page1 from './Page1.js';
 import Main from './Main.js';
 import Login from './Login.js';
 import Hotcontract from'./Hotcontract';
+import Buildacontract from'./Buildacontract';
 
 export default class Test extends Component {
   render() {
 
-    return (<Hotcontract/>);
+    return (<Frame/>);
 
     
 

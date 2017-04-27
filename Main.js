@@ -23,6 +23,9 @@ export default class Main extends Component {
   turn(self){
     self.props.navigator.push({title:"Hotcontract"})
   }
+  setup(self){
+    self.props.navigator.push({title:"Buildacontract"})
+  }
   render() {
     return (
         <View style={{flex:1,paddingTop:70,paddingLeft:40,paddingRight:40}}>
@@ -51,7 +54,7 @@ export default class Main extends Component {
             </View>
 
             <View style={{padding:10,flex:1}}>
-              <Button
+              <Button onPress={this.setup.bind(this.setup,this)}
                 style={{textAlign:'center', fontSize: 20,height:'100%', color: 'green',backgroundColor:'#fbbc05',borderRadius:5}}>
                 建立案件
               </Button>

@@ -32,7 +32,7 @@ export default class Frame extends Component {
   }
   render() {
     return (
-         <DrawerLayoutAndroid
+        <DrawerLayoutAndroid
         drawerWidth={200}  
         drawerPosition={DrawerLayoutAndroid.positions.Right}  
         renderNavigationView={() =>{return(
@@ -69,6 +69,8 @@ export default class Frame extends Component {
                 return (<Page1 navigator={navigator}/>)
               case 'Hotcontract':
                 return (<Hotcontract navigator={navigator}/>)  
+              case 'buildacontract':
+                return (<buildacontract navigator={navigator}/>)
             }
           }}
       />
