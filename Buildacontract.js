@@ -16,7 +16,7 @@ import {
 import Frame from './Frame.js';
 //import CheckBox from'react-native-checkbox';
 
-export default class Login extends Component {
+export default class Build extends Component {
   constructor(props) {
     super(props);
   
@@ -52,12 +52,9 @@ export default class Login extends Component {
                       <Text style={styles.textcenter}>任務結束日 :</Text>
                     </View>
                     <View style={styles.horizontal}>
-                      <Text style={styles.textcenter}>請選擇 :</Text>
-              
-
+                      <Text style={styles.textcenter}>請選擇 :</Text>           
                     </View>
                   </View>
-
                 </View>
               )}
       }

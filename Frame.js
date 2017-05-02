@@ -20,6 +20,7 @@ import Login from './Login.js';
 import Main from './Main.js';
 import Page1 from './Page1.js';
 import Hotcontract from './Hotcontract.js';
+import Build from './Buildacontract.js';
 export default class Frame extends Component {
   
   constructor(props) {
@@ -69,8 +70,8 @@ export default class Frame extends Component {
                 return (<Page1 navigator={navigator}/>)
               case 'Hotcontract':
                 return (<Hotcontract navigator={navigator}/>)  
-              case 'buildacontract':
-                return (<buildacontract navigator={navigator}/>)
+              case 'Buildacontract':
+                return (<Build navigator={navigator}/>)
             }
           }}
       />
