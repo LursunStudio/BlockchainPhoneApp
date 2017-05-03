@@ -15,9 +15,10 @@ import {
 
 } from 'react-native';
 import Frame from './Frame.js';
+import RadioButton from 'radio-button-react-native';
 
-//import CheckBox from'react-native-checkbox';
- 
+
+
 
 export default class Build extends Component {
   static propTypes = {
@@ -27,9 +28,13 @@ export default class Build extends Component {
     endY: React.PropTypes.number.isRequired,
     pickerKey: React.PropTypes.string,
     onCallback: React.PropTypes.func.isRequired,
+
   };
   constructor(props) {
     super(props);
+    this.state = {
+            value: 0
+        }
     let years = [];
     for(let i = this.props.startY;i <= this.props.endY; i++){
       years.push(i)
@@ -57,7 +62,9 @@ export default class Build extends Component {
     date.setDate(0);
     return date.getDate();
   }
-
+handleOnPress(value){
+    this.setState({value:value})
+}
   render() {
     return(
        <Navigator
@@ -206,7 +213,23 @@ export default class Build extends Component {
           </View >
                     </View>                                      
                     <View style={styles.horizontal}>
-                      <Text style={styles.textcenter}>請選擇 :</Text>           
+                      <Text style={styles.textcenter}>請選擇 :</Text>
+                    <RadioButton 
+                    currentValue={this.state.value} value={0} onPress={this.handleOnPress.bind(this)}/>
+                    <Text style={styles.textcenter}> 公開　</Text>
+                    <RadioButton 
+                    currentValue={this.state.value} value={1} onPress={this.handleOnPress.bind(this)}/>
+                    <Text style={styles.textcenter}> 私人　</Text>
+                    </View>
+                    
+                    
+                  </View>
+                  <View style={[styles.horizontal]}>
+                    <View  style={{flex:1,padding:5}} >
+                      <Button title="返回"/>
+                    </View>
+                    <View  style={{flex:1,padding:5}} >
+                      <Button title="確認"/>
                     </View>
                   </View>
                 </View>
