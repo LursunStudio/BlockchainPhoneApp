@@ -26,7 +26,7 @@ export default class Hotcontract extends Component {
         <View style={{flex:1,paddingTop:20,paddingLeft:40,paddingRight:40}}>  
         
           <View style={styles.centers}>
-            <Text style={[{fontSize:20}]}>熱門合約</Text>
+            <Text style={[{fontSize:20}]}></Text>
           </View>
           <View style={[styles.horizontal,{marginTop:60}]}> 
             <View style={{padding:10,flex:1,height:'100%'}}>

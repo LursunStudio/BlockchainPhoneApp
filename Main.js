@@ -14,66 +14,34 @@ import {
   Image
 
 } from 'react-native';
+import Hotcontract from './Hotcontract.js';
+
+import ScrollableTabView, {DefaultTabBar, } from 'react-native-scrollable-tab-view';
 
 export default class Main extends Component {
   
   constructor(props) {
     super(props);
   }
-  turn(self){
+hot(self){
     self.props.navigator.push({title:"Hotcontract"})
   }
-  setup(self){
-    self.props.navigator.push({title:"Buildacontract"})
-  }
-  render() {
+render() {
     return (
-        <View style={{flex:1,paddingTop:70,paddingLeft:40,paddingRight:40}}>
-          <View style={[styles.horizontal]}> 
-            <View style={{padding:10,flex:1,height:'100%'}}>
-              <Button
-                style={{align:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#4285f4',borderRadius:5}}>
-                參與案件
-              </Button>
-            </View>
-            <View style={{padding:10,flex:1}}>
-              <Button onPress={this.turn.bind(this.turn,this)}
-                style={{ textAlign:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#ea4335',borderRadius:5}}>
-                所有公開案件
-              </Button>
-            </View>
-          </View>
+    
+    <ScrollableTabView
+      style={{marginTop: 20, }}
+      renderTabBar={() => <DefaultTabBar />}
+    >
+      
+      <Text tabLabel='分類'>健康</Text>
+      <Hotcontract tabLabel='熱門合約'></Hotcontract>
+      <Text tabLabel='最新合約'>project</Text>
+      <Text tabLabel='追蹤的合約'>project</Text>
+      <Text tabLabel='參與的合約'>project</Text>
+    </ScrollableTabView>
+    
+      );
 
-          <View style={[styles.horizontal]}> 
-
-            <View style={{padding:10,flex:1}}>
-              <Button
-                style={{textAlign:'center',fontSize: 20,height:'100%', color: 'green',backgroundColor:'#34a853',borderRadius:5}}>
-                我的最愛
-              </Button>
-            </View>
-
-            <View style={{padding:10,flex:1}}>
-              <Button onPress={this.setup.bind(this.setup,this)}
-                style={{textAlign:'center', fontSize: 20,height:'100%', color: 'green',backgroundColor:'#fbbc05',borderRadius:5}}>
-                建立案件
-              </Button>
-            </View>
-
-          </View>
-        </View>
-    )
-  }
-}
-
-        
-
-
-const styles = StyleSheet.create({
-  horizontal:{
-    flexDirection:'row',
-    height:'20%',
-    justifyContent:'center',
-  },
-});
-
+  }}
+ 

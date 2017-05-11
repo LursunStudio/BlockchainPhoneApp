@@ -21,6 +21,9 @@ import RadioButton from 'radio-button-react-native';
 
 
 export default class Build extends Component {
+  return(self){
+    self.props.navigator.push({title:"Main"})
+  }
   static propTypes = {
     startY: React.PropTypes.number.isRequired,
     startM: React.PropTypes.number.isRequired,
@@ -226,7 +229,7 @@ handleOnPress(value){
                   </View>
                   <View style={[styles.horizontal]}>
                     <View  style={{flex:1,padding:5}} >
-                      <Button title="返回"/>
+                      <Button title="返回" onPress={this.return.bind(this.return,this)}/>
                     </View>
                     <View  style={{flex:1,padding:5}} >
                       <Button title="確認"/>
