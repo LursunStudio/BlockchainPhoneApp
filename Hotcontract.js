@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
 import Button from 'react-native-button';
 import {
-  AppRegistry,
   StyleSheet,
   Text,
   View,
-  TextInput,
-  ToolbarAndroid,
-  TouchableOpacity,
-  Navigator,
-  DrawerLayoutAndroid,
-  AsyncStorage,
-  Image
-
 } from 'react-native';
 
 export default class Hotcontract extends Component {
@@ -24,14 +15,13 @@ export default class Hotcontract extends Component {
     return (
         
         <View style={{flex:1,paddingTop:20,paddingLeft:40,paddingRight:40}}>  
-        
           <View style={styles.centers}>
             <Text style={[{fontSize:20}]}></Text>
           </View>
           <View style={[styles.horizontal,{marginTop:60}]}> 
             <View style={{padding:10,flex:1,height:'100%'}}>
               <Button
-                style={{align:'center',fontSize: 20,height:'100%', color: 'black',backgroundColor:'#4285f4',borderRadius:5}}>
+                style={{textAlign:'center',fontSize: 20,height:'100%', color: 'black',backgroundColor:'#4285f4',borderRadius:5}}>
                 減肥
               </Button>
             </View>
@@ -68,7 +58,6 @@ export default class Hotcontract extends Component {
 
 
           <View style={[styles.horizontal]}> 
-
             <View style={{padding:10,flex:1}}>
               <Button
                 style={{textAlign:'center',fontSize: 20,height:'100%', color: 'black',backgroundColor:'#34a853',borderRadius:5}}>
