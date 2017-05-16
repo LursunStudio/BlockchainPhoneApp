@@ -2,8 +2,9 @@
 先開好Genymotion 的 Android 虛擬機
 還有Android Studio 幫忙連線(隨便開一個專案run一下就好)
 
-唯一要會的指令
+
 cd 到這個目錄
+npm install 更新自已的套件
 react-native run-android
 
 

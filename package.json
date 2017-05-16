@@ -10,6 +10,8 @@
     "radio-button-react-native": "^1.1.6",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
+    "react-native-button": "^1.8.2",
+    "react-native-deprecated-custom-components": "^0.1.0",
     "react-native-modal-datetime-picker": "^4.6.0",
     "react-native-router-flux": "3.38.0",
     "react-native-scrollable-tab-view": "0.6.6",
