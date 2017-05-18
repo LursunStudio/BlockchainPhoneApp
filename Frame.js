@@ -5,9 +5,10 @@ import {
   View,
   AppRegistry,
   Alert,
+
   StyleSheet
 } from 'react-native';
-
+import Button from 'react-native-button';
 import { Navigator } from 'react-native-deprecated-custom-components'
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -30,7 +31,7 @@ export default class Frame extends Component {
          {text: '取消',},
          {text: '確認',
          onPress: function() {             
-            (this.confirm,this)
+            this.confirm,this
          }
        },
      ])
@@ -39,11 +40,12 @@ export default class Frame extends Component {
         return (
             <DrawerLayoutAndroid
             drawerWidth={200}  
+            
             drawerPosition={DrawerLayoutAndroid.positions.Right}  
             renderNavigationView={() =>{return(
                 //增加左滑東西
                 <View > 
-                <Text>123</Text>
+                <Text>留言板</Text>
                 </View>  
 
             )}}>
@@ -53,10 +55,11 @@ export default class Frame extends Component {
                 renderNavigationView={() =>{return(
                 //增加右滑東西
                 <View> 
-                    <Text style={{textAlign:'center',fontSize: 20, color: 'green',}}>健康</Text>
-                    <Text style={{textAlign:'center',fontSize: 20, color: 'green',}}>生活</Text>
-                    <Text style={{textAlign:'center',fontSize: 20, color: 'green',}}>娛樂</Text>
-                    <Text style={{textAlign:'center',fontSize: 20, color: 'green',}}>教育</Text>
+                    <Button style={{marginTop: 6,textAlign:'center', fontSize: 20,width:100,height:100, color: 'black',backgroundColor:'#ff8888',borderRadius:50}}>相片</Button>
+                    <Button style={{marginTop: 6,textAlign:'center', fontSize: 20,height:40, color: 'black',backgroundColor:'#ffffff',borderRadius:0}}>健康</Button>
+                    <Button style={{marginTop: 6,textAlign:'center', fontSize: 20,height:40, color: 'black',backgroundColor:'#ffffff',borderRadius:0}}>生活</Button>
+                    <Button style={{marginTop: 6,textAlign:'center', fontSize: 20,height:40, color: 'black',backgroundColor:'#ffffff',borderRadius:0}}>娛樂</Button>
+                    <Button style={{marginTop: 6,textAlign:'center', fontSize: 20,height:40, color: 'black',backgroundColor:'#ffffff',borderRadius:0}}>教育</Button>
                 </View>  
                 )}} >  
                     <Navigator
