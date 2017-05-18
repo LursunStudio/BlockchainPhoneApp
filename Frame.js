@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import {
   Text,
   DrawerLayoutAndroid,
-  View
+  View,
+  AppRegistry,
+  Alert,
+  StyleSheet
 } from 'react-native';
 
 import { Navigator } from 'react-native-deprecated-custom-components'
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
 import Main from './Main'
 import Login from './Login'
 import Build from './Buildacontract'
@@ -17,6 +22,19 @@ export default class Frame extends Component {
     constructor(props) {
         super(props);
     }
+     confirm(self){
+        self.props.navigator.push({title:"Build"})
+    }
+    tip() {
+     Alert.alert('提示', '將要訪問建立合約頁面', [
+         {text: '取消',},
+         {text: '確認',
+         onPress: function() {             
+            (this.confirm,this)
+         }
+       },
+     ])
+   }
     render() {
         return (
             <DrawerLayoutAndroid
@@ -43,7 +61,7 @@ export default class Frame extends Component {
                 )}} >  
                     <Navigator
                     configureScene={(route, routeStack) => Navigator.SceneConfigs.FloatFromBottom}
-                    initialRoute={{ title: 'Myaccount' }}
+                    initialRoute={{ title: 'Main' }}
                     renderScene={(route, navigator) =>
                     {
                         switch (route.title){
@@ -60,9 +78,20 @@ export default class Frame extends Component {
                         
                     }}
                     />
+                    <ActionButton onPress={this.tip.bind(this)} buttonColor="rgba(231,76,60,1)">       
+        </ActionButton>
                 </DrawerLayoutAndroid>
             </DrawerLayoutAndroid>
 
         )
   }
+   
 }
+
+const styles = StyleSheet.create({
+  actionButtonIcon: {
+    fontSize: 20,
+    height: 22,
+    color: 'white',
+  },
+});
