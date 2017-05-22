@@ -18,12 +18,9 @@ export default class Main extends Component {
            
             <ScrollableTabView
                 renderTabBar={() => <DefaultTabBar />}>
-<<<<<<< HEAD
-                <Text tabLabel='分類'>健康</Text>
-                <Hotcontract tabLabel='熱門合約' navigator={navigator} ></Hotcontract>
-=======
+
                 <Hotcontract tabLabel='熱門合約'></Hotcontract>
->>>>>>> fa6833d418319bc427ea217eb8664b44670aeb19
+
                 <Text tabLabel='最新合約'>project</Text>
                 <Text tabLabel='追蹤的合約'>project</Text>
                 <Text tabLabel='參與的合約'>project</Text>
