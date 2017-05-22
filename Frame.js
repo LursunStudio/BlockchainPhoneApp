@@ -17,6 +17,7 @@ import Login from './Login'
 import Build from './Buildacontract'
 import Myaccount from './Myaccount'
 import Hotcontract from './Hotcontract'
+import newpage from './newpage'
 //增加頁面
 // Page1 是範例
 
@@ -43,16 +44,7 @@ export default class Frame extends Component {
             drawerWidth={200}  
             
             drawerPosition={DrawerLayoutAndroid.positions.Right}  
-<<<<<<< HEAD
-            renderNavigationView={() =>{
-                return(
-                    //增加左滑東西
-                    <View > 
-                    <Text>123</Text>
-                    </View>  
-                )
-            }}>
-=======
+
             renderNavigationView={() =>{return(
                 //增加左滑東西
                 <View > 
@@ -60,7 +52,6 @@ export default class Frame extends Component {
                 </View>  
 
             )}}>
->>>>>>> fa6833d418319bc427ea217eb8664b44670aeb19
                 <DrawerLayoutAndroid
                 drawerWidth={200}  
                 drawerPosition={DrawerLayoutAndroid.positions.Left}  
@@ -76,11 +67,11 @@ export default class Frame extends Component {
                 )}} >  
                     <Navigator
                     configureScene={(route, routeStack) => Navigator.SceneConfigs.FloatFromBottom}
-<<<<<<< HEAD
-                    initialRoute={{ title: 'Build' }}
-=======
-                    initialRoute={{ title: 'Main' }}
->>>>>>> fa6833d418319bc427ea217eb8664b44670aeb19
+
+                    
+
+                    initialRoute={{ title: 'newpage' }}
+
                     renderScene={(route, navigator) =>
                     {
                         switch (route.title){
@@ -95,6 +86,9 @@ export default class Frame extends Component {
                             return (<Myaccount navigator={navigator} />)
                         case 'Hotcontract':
                             return (<Hotcontract navigator={navigator} />)
+                        case'newpage':
+                            return(<newpage navigator={navigator}/>)
+
                         }
                         
                     }}
