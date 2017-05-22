@@ -10,6 +10,7 @@ import Main from './Main'
 import Login from './Login'
 import Build from './Buildacontract'
 import Myaccount from './Myaccount'
+import Hotcontract from './Hotcontract'
 //增加頁面
 // Page1 是範例
 
@@ -22,13 +23,14 @@ export default class Frame extends Component {
             <DrawerLayoutAndroid
             drawerWidth={200}  
             drawerPosition={DrawerLayoutAndroid.positions.Right}  
-            renderNavigationView={() =>{return(
-                //增加左滑東西
-                <View > 
-                <Text>123</Text>
-                </View>  
-
-            )}}>
+            renderNavigationView={() =>{
+                return(
+                    //增加左滑東西
+                    <View > 
+                    <Text>123</Text>
+                    </View>  
+                )
+            }}>
                 <DrawerLayoutAndroid
                 drawerWidth={200}  
                 drawerPosition={DrawerLayoutAndroid.positions.Left}  
@@ -43,7 +45,7 @@ export default class Frame extends Component {
                 )}} >  
                     <Navigator
                     configureScene={(route, routeStack) => Navigator.SceneConfigs.FloatFromBottom}
-                    initialRoute={{ title: 'Myaccount' }}
+                    initialRoute={{ title: 'Build' }}
                     renderScene={(route, navigator) =>
                     {
                         switch (route.title){
@@ -56,6 +58,8 @@ export default class Frame extends Component {
                             return (<Build navigator={navigator} />)
                         case 'Myaccount':
                             return (<Myaccount navigator={navigator} />)
+                        case 'Hotcontract':
+                            return (<Hotcontract navigator={navigator} />)
                         }
                         
                     }}

@@ -20,13 +20,13 @@ export default class Hotcontract extends Component {
           </View>
           <View style={[styles.horizontal,{marginTop:60}]}> 
             <View style={{padding:10,flex:1,height:'100%'}}>
-              <Button
+              <Button onPress={ (self) => { this.props.navigator.push({ title:'Main'}) } }
                 style={{textAlign:'center',fontSize: 20,height:'100%', color: 'black',backgroundColor:'#4285f4',borderRadius:5}}>
                 減肥
               </Button>
             </View>
             <View style={{padding:10,flex:1}}>
-              <Button
+              <Button 
                 style={{ textAlign:'center',fontSize: 20,height:'100%', color: 'black',backgroundColor:'#ea4335',borderRadius:5}}>
                 不抽煙
               </Button>
