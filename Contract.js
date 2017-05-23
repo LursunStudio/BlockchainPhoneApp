@@ -52,7 +52,7 @@ export default class Contract extends Component {
                             <Text style={styles.textcenter}>目標體重 :</Text><TextInput style={{flex:1}} onChangeText={(text) => {this._passwd2=text;}} >95</TextInput>
                         </View>
                         <View style={styles.horizontal}>
-                            <Text style={styles.textcenter}>押金 :</Text><TextInput style={{flex:1}} onChangeText={(text) => {this._passwd2=text;}} >100</TextInput>
+                            <Text style={styles.textcenter}>保證金 :</Text><TextInput style={{flex:1}} onChangeText={(text) => {this._passwd2=text;}} >100</TextInput>
                         </View>
                         <View style={styles.horizontal}>
                             <Text style={styles.textcenter}>任務結束日 :2017/06/30</Text>
