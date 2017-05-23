@@ -45,13 +45,17 @@ export default class Frame extends Component {
             
             drawerPosition={DrawerLayoutAndroid.positions.Right}  
 
-            renderNavigationView={() =>{return(
+
+           
+            renderNavigationView={() =>{
+                return(
                 //增加左滑東西
                 <View > 
                 <Text>留言板</Text>
                 </View>  
 
             )}}>
+
                 <DrawerLayoutAndroid
                 drawerWidth={200}  
                 drawerPosition={DrawerLayoutAndroid.positions.Left}  
@@ -67,11 +71,7 @@ export default class Frame extends Component {
                 )}} >  
                     <Navigator
                     configureScene={(route, routeStack) => Navigator.SceneConfigs.FloatFromBottom}
-
-                    
-
                     initialRoute={{ title: 'Newpage' }}
-
                     renderScene={(route, navigator) =>
                     {
                         switch (route.title){
