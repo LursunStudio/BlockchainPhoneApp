@@ -3,6 +3,8 @@ import Button from 'react-native-button';
 import {
   StyleSheet,
   Text,
+  TouchableOpacity,
+  Navigator,
   View,
 } from 'react-native';
 
@@ -10,6 +12,9 @@ export default class Hotcontract extends Component {
   
   constructor(props) {
     super(props);
+  }
+  async _click (self){
+    self.props.navigator.push({title:"Contract"})
   }
   render() {
     return (
@@ -20,7 +25,7 @@ export default class Hotcontract extends Component {
           </View>
           <View style={[styles.horizontal,{marginTop:60}]}> 
             <View style={{padding:10,flex:1,height:'100%'}}>
-              <Button onPress={ (self) => { this.props.navigator.push({ title:'Main'}) } }
+              <Button onPress={() => this._click()}
                 style={{textAlign:'center',fontSize: 20,height:'100%', color: 'black',backgroundColor:'#4285f4',borderRadius:5}}>
                 減肥
               </Button>
@@ -73,6 +78,7 @@ export default class Hotcontract extends Component {
             </View>
 
           </View>
+           
         </View>
     )
   }
