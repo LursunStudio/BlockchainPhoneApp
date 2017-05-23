@@ -18,6 +18,8 @@ import Build from './Buildacontract'
 import Myaccount from './Myaccount'
 import Hotcontract from './Hotcontract'
 import Newpage from './Newpage'
+import Contract from './Contract'
+
 //增加頁面
 // Page1 是範例
 
@@ -88,7 +90,8 @@ export default class Frame extends Component {
                             return (<Hotcontract navigator={navigator} />)
                         case'Newpage':
                             return(<Newpage navigator={navigator}/>)
-
+                        case 'Contract':
+                            return (<Contract navigator={navigator} />)
                         }
                         
                     }}

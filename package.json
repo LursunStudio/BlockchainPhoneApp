@@ -13,6 +13,7 @@
     "react-native": "0.44.0",
     "react-native-action-button": "^2.6.9",
     "react-native-button": "^1.8.2",
+    "react-native-cardview": "^1.0.3",
     "react-native-deprecated-custom-components": "^0.1.0",
     "react-native-modal-datetime-picker": "^4.6.0",
     "react-native-router-flux": "3.38.0",
