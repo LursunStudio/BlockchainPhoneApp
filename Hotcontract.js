@@ -13,7 +13,7 @@ export default class Hotcontract extends Component {
   constructor(props) {
     super(props);
   }
-  async _click (self){
+  _click=function(self){
     self.props.navigator.push({title:"Contract"})
   }
   render() {
@@ -25,7 +25,7 @@ export default class Hotcontract extends Component {
           </View>
           <View style={[styles.horizontal,{marginTop:60}]}> 
             <View style={{padding:10,flex:1,height:'100%'}}>
-              <Button onPress={() => this._click()}
+              <Button onPress={this._click.bind(this._click,this)}
                 style={{textAlign:'center',fontSize: 20,height:'100%', color: 'black',backgroundColor:'#4285f4',borderRadius:5}}>
                 減肥
               </Button>

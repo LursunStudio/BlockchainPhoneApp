@@ -30,18 +30,20 @@ export default class Frame extends Component {
      confirm(self){
         self.props.navigator.push({title:"Build"})
     }
-    tip() {
+    tip(self) {
+        self.props.navigator.push({title:'Build'})
      Alert.alert('提示', '將要訪問建立合約頁面', [
          {text: '取消',},
          {text: '確認',
-         onPress: function() {             
-            this.confirm,this
+         onPress: function(self) {             
+            self.props.navigator.push({title:'Build'})
          }
        },
      ])
    }
     render() {
         return (
+            
             <DrawerLayoutAndroid
             drawerWidth={200}  
             
@@ -73,7 +75,7 @@ export default class Frame extends Component {
                 )}} >  
                     <Navigator
                     configureScene={(route, routeStack) => Navigator.SceneConfigs.FloatFromBottom}
-                    initialRoute={{ title: 'Newpage' }}
+                    initialRoute={{ title: 'Main' }}
                     renderScene={(route, navigator) =>
                     {
                         switch (route.title){
@@ -96,7 +98,7 @@ export default class Frame extends Component {
                         
                     }}
                     />
-                    <ActionButton onPress={this.tip.bind(this)} buttonColor="rgba(231,76,60,1)">       
+                    <ActionButton onPress={this.tip.bind(this.tip,this)} buttonColor="rgba(231,76,60,1)">       
         </ActionButton>
                 </DrawerLayoutAndroid>
             </DrawerLayoutAndroid>
