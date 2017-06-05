@@ -31,6 +31,9 @@ export default class Contract extends Component {
     handleOnPress(value){
         this.setState({value:value});
     }
+     return(self){
+        self.props.navigator.push({title:"Main"})
+    }
      message(self){
         self.props.navigator.push({title:"Message"})
     }
@@ -66,7 +69,7 @@ export default class Contract extends Component {
                    
                 <View style={[styles.horizontal]}>
                     <View  style={{flex:1,padding:5}} >
-                        <Button title="返回" onPress={()=>(this.props.navigator.pop())}/>
+                        <Button title="返回" onPress={this.return.bind(this.return,this)}/>
                     </View>
                     <View  style={{flex:1,padding:5}} >
                       <Button title="確認" onPress={()=>(this.props.navigator.pop())} />
