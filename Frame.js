@@ -19,6 +19,8 @@ import Myaccount from './Myaccount'
 import Hotcontract from './Hotcontract'
 import Newpage from './Newpage'
 import Contract from './Contract'
+import Message from './Message'
+
 
 //增加頁面
 // Page1 是範例
@@ -43,23 +45,6 @@ export default class Frame extends Component {
    }
     render() {
         return (
-            
-            <DrawerLayoutAndroid
-            drawerWidth={200}  
-            
-            drawerPosition={DrawerLayoutAndroid.positions.Right}  
-
-
-           
-            renderNavigationView={() =>{
-                return(
-                //增加左滑東西
-                <View > 
-                <Text>留言板</Text>
-                </View>  
-
-            )}}>
-
                 <DrawerLayoutAndroid
                 drawerWidth={200}  
                 drawerPosition={DrawerLayoutAndroid.positions.Left}  
@@ -94,6 +79,8 @@ export default class Frame extends Component {
                             return(<Newpage navigator={navigator}/>)
                         case 'Contract':
                             return (<Contract navigator={navigator} />)
+                        case 'Message':
+                            return (<Message navigator={navigator} />)
                         }
                         
                     }}
@@ -101,7 +88,7 @@ export default class Frame extends Component {
                     <ActionButton onPress={this.tip.bind(this.tip,this)} buttonColor="rgba(231,76,60,1)">       
         </ActionButton>
                 </DrawerLayoutAndroid>
-            </DrawerLayoutAndroid>
+          
 
         )
   }
